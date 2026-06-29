@@ -1,0 +1,221 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <base href="/static/client/home/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Client Kneepain Symptoms</title>
+    <!-- google-fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Template CSS Style link -->
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+</head>
+
+<body>
+    <script>
+        {% for message in messages %}
+            alert('{{ message }}');
+        {% endfor %}
+    </script>
+
+    <!--header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg stroke">
+                <h1>
+                    <a class="navbar-brand" href="/cl_home/">
+                        <i class="fas fa-user mr-1"></i>CLIENT
+                    </a>
+                </h1>
+                <button class="navbar-toggler collapsed bg-gradient" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ml-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/cl_home/">HOME</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/cl_req/">SYMPTOMS</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="reportDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                POST THERAPY EVALUATION <i class="fas fa-caret-down ml-1"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-two-column" aria-labelledby="reportDropdown">
+                                <a class="dropdown-item" href="/cl_bp_pte/">BACK PAIN</a>
+                                <a class="dropdown-item" href="/cl_kp_pte/">KNEE PAIN</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="statusDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                STATUS <i class="fas fa-caret-down ml-1"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-two-column" aria-labelledby="statusDropdown">
+                                <a class="dropdown-item" href="/cl_bp_status/">BACK PAIN</a>
+                                <a class="dropdown-item" href="/cl_kp_status/">KNEE PAIN</a>
+                            </div>
+                        </li>
+                        
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="/cl_logout/">LOGOUT</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Input Section -->
+    <section class="w3l-main-slider position-relative" id="home">
+        <div class="banner-view">
+            <div class="banner-info">
+                <h3 style="text-align: center; color:white; padding-top:70px">SYMPTOMS OF KNEE PAIN</h3>
+                <div class="input-container">
+                    {% for i in obj %}
+                    <form method="post" action="/cl_req_kp_up/{{i.rh_id}}/">
+                        {% csrf_token %}
+                        
+                        {% comment %} {% if i.knee_pain is False or i.back_pain is True %} {% endcomment %}
+                        <div class="input-grid">
+                            <div class="input-wrapper">
+                                <label style="color:black;">Type of Pain</label>
+                                <input type="text" name="knee_pain" value="Knee Pain" id="value_1" required style="background-color:#fff">
+                            </div>
+                            <div class="input-wrapper">
+                                <label style="color:black;">Client ID</label>
+                                <input type="text" name="client_id" value="{{i.rh_id}}" id="client_id" required style="background-color:#fff">
+                            </div>
+                            <div class="input-wrapper">
+                                <label style="color:black;">Pain(%)</label>
+                                <input type="number" name="pain" id="value_1" min="0" max="100" required>
+                            </div>
+                            <div class="input-wrapper">
+                                <label style="color:black;">Swelling(%)</label>
+                                <input type="number" name="swelling" id="value_2" min="0" max="100" required>
+                            </div>
+                            <div class="input-wrapper">
+                                <label style="color:black;">Stiffness(%)</label>
+                                <input type="number" name="stiffness" id="value_3" min="0" max="100" required>
+                            </div>
+                            <div class="input-wrapper">
+                                <label style="color:black;">Warmth and Redness(%)</label>
+                                <input type="number" name="warmth_and_redness" id="value_4" min="0" max="100" required>
+                            </div>
+                            <div class="input-wrapper">
+                                <label style="color:black;">Weakness or Instability(%)</label>
+                                <input type="number" name="weakness_or_instability" id="value_5" min="0" max="100" required>
+                            </div>
+                            <div class="input-wrapper">
+                                <label style="color:black;">Popping or Grinding Sensation(%)</label>
+                                <input type="number" name="popping_or_grinding_sensation" id="value_6" min="0" max="100" required>
+                            </div>
+                            <div class="input-wrapper">
+                                <label style="color:black;">Limited Range of Motion(%)</label>
+                                <input type="number" name="limited_range_of_motion" id="value_7" min="0" max="100" required>
+                            </div>
+                            <div class="input-wrapper">
+                                <label style="color:black;">Pain with Certain Movements(%)</label>
+                                <input type="number" name="pain_with_certain_movements" id="value_8" min="0" max="100" required>
+                            </div>
+                            <div class="input-wrapper">
+                                <label style="color:black;">Tenderness(%)</label>
+                                <input type="number" name="tenderness" id="value_9" min="0" max="100" required>
+                            </div>
+                            <div class="input-wrapper">
+                                <label style="color:black;">Difficulty Bearing Weight(%)</label>
+                                <input type="number" name="bearing_weight" id="value_10" min="0" max="100" required>
+                            </div>
+                        </div>
+                        <div class="button-container" style="margin-left:-250px;">
+                            <button type="submit">Submit</button>
+                        </div>
+                        {% comment %} {% endif %} {% endcomment %}
+                        
+                    </form>
+                    {% endfor %}
+                    
+                </div>
+                <div class="button-container" style="margin-left:250px; margin-top:-90px;">
+                    <a href="/cl_home/"><button type="button">Back</button></a>
+                </div>
+<br><br><br>
+                <style>
+                    .input-container {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 40px 0;
+                    }
+
+                    .input-grid {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 5px;
+                        padding: 20px;
+                        border-radius: 10px;
+                        max-width: 900px;
+                        width: 100%;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                        background: #ccc;
+                    }
+
+                    .input-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    .input-wrapper label {
+                        font-size: 14px;
+                        margin-bottom: 5px;
+                        font-weight: 600;
+                    }
+
+                    input[type="text"],
+                    input[type="number"] {
+                        padding: 10px;
+                        border: 1px solid #ccc;
+                        border-radius: 5px;
+                        font-size: 16px;
+                        width: 100%;
+                    }
+
+                    .button-container {
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 10px;
+                    }
+
+                    button {
+                        padding: 12px 24px;
+                        background-color: #28a745;
+                        color: #fff;
+                        border: none;
+                        border-radius: 25px;
+                        font-size: 16px;
+                        cursor: pointer;
+                        transition: background-color 0.3s ease;
+                        width: 200px;
+                    }
+
+                    button:hover {
+                        background-color: #218838;
+                    }
+                </style>
+            </div>
+        </div>
+    </section>
+
+    <!-- JS scripts -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/theme-change.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>

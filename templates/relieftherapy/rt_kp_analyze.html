@@ -1,0 +1,331 @@
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+{% load static %}
+<html lang="zxx">
+<head>
+  <!-- Required meta tags -->
+   <base href="/static/relieftherapy/home/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords"
+    content="Reprise Responsive web template, Bootstrap Web Templates" />
+  <title>Relieftherapy KneePain Analyze</title>
+  <link href="//fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link href="//fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="assets/css/style-starter.css">
+</head>
+<body>
+<!-- header -->
+<header id="site-header" class="header fixed-top">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg stroke">
+      <a class="navbar-brand mr-xl-5 mr-lg-3" href="index.html">
+        <span class="fa fa-plus-circle"></span>RELIEFTHERAPY
+      </a>
+      <button class="navbar-toggler collapsed bg-gradient" type="button" data-toggle="collapse"
+        data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+        <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav ml-auto"> <!-- Added ml-auto here -->
+          <li class="nav-item">
+            <a class="nav-link" href="/rt_home/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="about.html" id="requirementsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              SYMPTOMS <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="requirementsDropdown">
+              <a class="dropdown-item" href="/rt_bp_req/">BACKPAIN</a>
+              <a class="dropdown-item" href="/rt_kp_req/">KNEEPAIN</a>
+            </div>
+          </li>
+          
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="services.html" id="analyzeDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              ANALYZE <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="analyzeDropdown">
+              <a class="dropdown-item" href="/rt_bp_analyze/">BACKPAIN</a>
+              <a class="dropdown-item active" href="/rt_kp_analyze/">KNEEPIAN</a>
+            </div>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="contact.html" id="reportDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              REPORT <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="reportDropdown">
+              <a class="dropdown-item" href="/rt_bp_report/">BACKPAIN</a>
+              <a class="dropdown-item" href="/rt_kp_report/">KNEEPAIN</a>
+            </div>
+          </li>
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/rt_logout/">LOGOUT</a>
+          </li>
+          <!--//search-right-->
+          <div class="search-right ml-xl-5 mr-xl-0 mr-lg-3 ">
+          </div>
+          <!--/search-right-->
+        </ul>
+      </div>
+      <!-- toggle switch for light and dark theme -->
+      <div class="mobile-position">
+        <nav class="navigation">
+          <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+              <input type="checkbox" id="checkbox">
+              <div class="mode-container">
+                <i class="gg-sun"></i>
+                <i class="gg-moon"></i>
+              </div>
+            </label>
+          </div>
+        </nav>
+      </div>
+      <!-- //toggle switch for light and dark theme -->
+    </nav>
+  </div>
+</header>
+<!-- //header -->
+
+<script>
+	{% for message in messages %}
+		alert('{{ message }}');
+	{% endfor %}
+</script>
+
+  <!-- banner-section -->
+  <section id="home" class="w3l-banner py-5">
+    <div class="container">
+
+        <h2 style="text-align:center; color:black; margin-top:5%">
+            KNEE PAIN ANALYZE </h2><br>
+            <div class="container" style="max-height:400vh; overflow: auto; margin-bottom:200px; width:100%;">
+            <table class="custom-table">
+                <thead>
+                  <tr style="text-align:center;">
+                    <th>CLIENT ID</th>
+                    <th>TYPE OF PAIN</th>
+                    <th>PAIN(%)</th>
+                    <th>SWELLING(%)</th>
+                    <th>STIFFNESS(%)</th>
+                    <th>WARMTH AND REDNESS(%)</th>
+                    <th>WEAKNESS OR INSTABILITY(%)</th>
+                    <th>POPPING OR GRINDING SENSATION(%)</th>
+                    <th>LIMITED RANGE OF MOTION(%)</th>
+                    <th>PAIN WITH CERTAIN MOVEMENT(%)</th>
+                    <th>TENDERNESS(%)</th>
+                    <th>BEARING WEIGHT(%)</th>
+                    <th>SEVERITY(%)</th>
+                    <th>TYPE OF KNEEPAIN</th>
+                    <th>ACTION</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for i in obj %}
+                  {% if obj %}
+                    
+                      {% if i.type_of_pain == "knee_pain" %}
+                        <tr style="text-align:center;">
+                          <td>{{ i.cl_rh_id }}</td>
+                          <td>{{ i.type_of_pain }}</td>
+                          <td>{{ i.pain }}</td>
+                          <td>{{ i.swelling }}</td>
+                          <td>{{ i.stiffness }}</td>
+                          <td>{{ i.warmth_and_redness }}</td>
+                          <td>{{ i.weakness_or_instability }}</td>
+                          <td>{{ i.popping_or_grinding_sensation }}</td>
+                          <td>{{ i.limites_range_of_motion }}</td>
+                          <td>{{ i.pain_with_certain_movements }}</td>
+                          <td>{{ i.tenderness }}</td>
+                          <td>{{ i.bearing_weight }}</td>
+                          <td>{{ i.severity }}</td>
+                          <td>{{ i.type_of_kneepain }}</td>
+                          {% if i.rt_kp_scan is False %}
+                            <td>
+                                <a href="/rt_kp_analyze_process/{{i.cl_rh_id}}/">
+                                <button class="scan-button">SCAN</button>
+                                </a>
+                            </td>
+                          {% elif i.rt_kp_scan is True %}
+                            <td>SCANNED</td>
+                          {% endif %}
+      
+                      {% endif %}
+                        </tr>  
+                  {% elif i.type_of_pain != "back_pain" is False and i.type_of_pain != "knee_pain" %}
+                    <tr>
+                      <td colspan="21" style="text-align:center;">No Data Found</td>
+                    </tr>
+                  {% endif %}
+                  {% endfor %}
+                </tbody>
+              </table> 
+        </div>
+               
+   
+    </div>
+  </section>
+  <!-- //banner-section -->
+ 
+ 
+ <!--For Table-->
+<style>
+    /* Centering and styling table */
+    .table-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100%;
+    }
+    
+    .custom-table {
+      width: 100%;
+      max-width: 1300px;
+      border-collapse: collapse;
+      font-size: 16px;
+      text-align: left;
+    }
+    
+    .custom-table thead tr {
+      background-color: #f3525a;
+      color: #ffffff;
+    }
+    
+    .custom-table th, .custom-table td {
+      padding: 12px 15px;
+      border: 1px solid #dddddd;
+    }
+    
+    .custom-table tbody tr {
+      background-color: #ffffff;
+      color: #000000;
+    }
+    
+    .custom-table tbody tr:nth-child(even) {
+      background-color: #f3f3f3;
+    }
+    </style>
+
+
+<!--For Button-->
+<style>
+    .scan-button {
+        background-color: #28a745; /* Green color */
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 30px; /* Rounded corners */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        cursor: pointer;
+        transition: all 0.3s ease; /* Smooth transition */
+    }
+  
+    .scan-button:hover {
+        background-color: #218838; /* Darker green on hover */
+        transform: scale(1.05); /* Slightly increase size on hover */
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25); /* Enhanced shadow on hover */
+    }
+  
+    .scan-button:active {
+        transform: scale(1); /* Reset size on click */
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow on click */
+    }
+  </style>
+ 
+ 
+  <!-- Template JavaScript -->
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <script src="assets/js/theme-change.js"></script>
+   <!--/carousel-->
+  <script src="assets/js/owl.carousel.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#owl-demo1").owlCarousel({
+        loop: true,
+        nav: false,
+        responsiveClass: true,
+        responsive: {
+          0: {
+            items: 1,
+            nav: false
+          },
+          736: {
+            items: 1,
+            nav: false
+          }
+        }
+      })
+    })
+  </script>
+  <!-- //script for tesimonials carousel slider -->
+  <!-- gallery popup js -->
+  <script src="assets/js/smartphoto.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const sm = new SmartPhoto(".js-img-viwer", {
+        showAnimation: false
+      });
+      // sm.destroy();
+    });
+  </script>
+  <!-- //gallery popup js -->
+  <!-- disable body scroll which navbar is in active -->
+  <script>
+    $(function () {
+      $('.navbar-toggler').click(function () {
+        $('body').toggleClass('noscroll');
+      })
+    });
+  </script>
+  <!-- disable body scroll which navbar is in active -->
+
+
+  <!--/MENU-JS-->
+  <script>
+    $(window).on("scroll", function () {
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= 80) {
+        $("#site-header").addClass("nav-fixed");
+      } else {
+        $("#site-header").removeClass("nav-fixed");
+      }
+    });
+
+    //Main navigation Active Class Add Remove
+    $(".navbar-toggler").on("click", function () {
+      $("header").toggleClass("active");
+    });
+    $(document).on("ready", function () {
+      if ($(window).width() > 991) {
+        $("header").removeClass("active");
+      }
+      $(window).on("resize", function () {
+        if ($(window).width() > 991) {
+          $("header").removeClass("active");
+        }
+      });
+    });
+  </script>
+  <!--//MENU-JS-->
+  <script src="assets/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

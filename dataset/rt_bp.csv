@@ -1,0 +1,99 @@
+dull_aching_pain,sharp_stabbing_pain,muscle_spasms,radiating_pain,numbness_or_tingling,weakness,b_stiffness,pain_with_movement,pain_that_worsens_at_night,fatigue,loss_of_range_of_motion,fever_or_chills,severity,type_of_back_pain,therapy,duration
+25,40,30,35,25,45,40,50,20,30,40,15,50,Sciatica,NSAIDs,As needed typically short-term
+50,55,45,60,35,55,50,65,25,40,50,20,60,Sciatica,Aquatic Therapy,6–8 weeks 2–3 sessions per week
+75,65,60,70,50,65,60,75,30,50,60,25,75,Myofascial Pain Syndrome,Core Stabilization,8–12 weeks 3 sessions per week
+100,80,70,80,65,75,70,85,40,60,70,30,90,Sciatica,Yoga for Back Pain,4–6 weeks 3–4 sessions per week
+25,40,35,50,20,40,30,50,15,30,40,10,45,Muscle Strain,Rest and Activity Modification,Short-term as needed
+50,55,45,60,30,55,50,65,25,40,50,12,60,Muscle Strain,Stretching for Flexibility,4–6 weeks 1–2 sessions per week
+75,60,50,70,45,60,55,70,30,50,55,20,70,Muscle Strain,Pilates,6–8 weeks 3 sessions per week
+100,70,65,80,60,70,65,80,35,55,60,28,85,Muscle Strain,Manual Therapy,4–6 weeks 1–2 sessions per week
+25,50,40,60,25,45,40,55,20,35,45,18,55,Disc Herniation,Stretching Exercises,Ongoing as needed
+50,60,50,70,40,55,50,60,25,45,55,22,65,Disc Herniation,Spinal Decompression Therapy,4–6 weeks 2 sessions per week
+75,70,60,75,50,60,55,70,30,50,60,18,75,Disc Herniation,Neuromuscular Massage,2 sessions per week for 6 weeks
+100,80,70,85,60,70,65,80,40,60,70,35,90,Disc Herniation,Functional Strength Training,6–8 weeks 3 sessions per week
+25,45,35,50,30,40,35,55,15,25,35,8,50,Spinal Stenosis,NSAIDs,As needed typically short-term
+50,55,45,65,40,50,45,60,25,35,45,12,60,Spinal Stenosis,Aquatic Therapy,6–8 weeks 2–3 sessions per week
+75,60,55,70,50,60,55,65,35,50,55,22,70,Spinal Stenosis,Epidural Steroid Injections,Typically 1 injection every 3 months
+100,80,70,75,65,75,70,80,40,60,65,32,85,Spinal Stenosis,Posture Correction Exercises,6–8 weeks 3 sessions per week
+25,40,30,45,20,35,30,55,15,30,40,10,45,Facet Joint Syndrome,Heat Therapy (e.g. heating pad),10–15 minutes as needed
+50,55,45,60,35,50,45,60,25,40,50,18,60,Lumbar Strain,Chiropractic Care,4–6 weeks 1–2 sessions per week
+75,60,50,70,45,55,50,65,30,50,55,22,70,Facet Joint Syndrome,Trigger Point Injections,1 injection every few weeks as needed
+100,80,70,75,60,70,65,75,35,55,60,28,85,Facet Joint Syndrome,Spinal Manipulation,As determined by a healthcare provider
+25,45,40,55,30,40,35,50,15,30,40,10,50,Degenerative Disc Disease,Rest and Activity Modification,Short-term as needed
+50,60,50,65,40,50,45,60,25,45,50,16,60,Kyphosis,Postural Training,6–8 weeks 2–3 sessions per week
+75,70,60,75,50,60,55,70,30,50,55,20,70,Degenerative Disc Disease,Spinal Decompression Therapy,4–6 weeks 2 sessions per week
+100,80,70,80,60,70,65,75,40,60,65,28,85,Myofascial Pain Syndrome,Massage Therapy,4–6 weeks 1–2 sessions per week
+25,40,35,50,25,45,40,55,20,35,45,15,50,Osteoarthritis,NSAIDs,As needed typically short-term
+50,55,45,60,35,50,45,60,25,40,50,18,60,Osteoarthritis,Tai Chi,6–8 weeks 2–3 sessions per week
+75,60,50,70,45,55,50,65,30,50,55,22,70,Osteoarthritis,Joint Injections,Typically 1 injection every few months
+100,80,70,75,60,70,65,75,40,60,65,30,85,Osteoarthritis,Functional Strength Training,6–8 weeks 3 sessions per week
+25,45,40,55,30,40,35,50,15,30,40,10,50,Herniated Disc,Heat Therapy (e.g. heating pad),10–15 minutes as needed
+50,60,50,65,40,50,45,60,25,40,50,14,60,Herniated Disc,Chiropractic Care,4–6 weeks 2–3 sessions per week
+75,65,55,70,45,55,50,65,30,50,55,18,70,Myofascial Pain Syndrome,Trigger Point Injections,1 injection every few weeks as needed
+100,80,70,75,60,70,65,75,40,60,65,22,85,Herniated Disc,Core Stabilization,6–8 weeks 3 sessions per week
+50,45,40,55,30,45,40,60,20,35,45,14,55,Sciatica,Massage Therapy,4–6 weeks 2–3 sessions per week
+60,50,55,70,35,50,50,65,30,45,55,18,65,Sciatica,Heat Therapy (e.g. heating pad),As needed typically short-term
+70,60,65,80,40,55,55,70,35,50,60,20,75,Sciatica,Strengthening Exercises for Core,6–8 weeks 3 sessions per week
+80,70,75,85,45,60,60,75,40,55,65,25,80,Sciatica,Chiropractic Care,6–8 weeks 2–3 sessions per week
+30,50,35,55,25,45,40,55,20,35,45,15,50,Radiculopathy,Acupuncture,2 sessions per week for 4 weeks
+55,65,45,70,30,55,50,60,25,40,55,20,60,Sciatica,Aquatic Therapy,6 weeks twice a week
+65,70,55,75,35,60,55,65,30,45,60,22,70,Sciatica,McKenzie Method Exercises,8–10 weeks 2 sessions per week
+90,80,65,85,45,65,60,70,40,55,65,30,80,Sciatica,Trigger Point Therapy,6 weeks weekly 4 sessions
+35,45,30,50,25,40,35,55,20,35,40,18,55,Muscle Strain,Functional Movement Training,4–6 weeks 1 session per week
+50,55,45,60,30,50,45,60,25,40,50,18,65,Muscle Strain,Stabilization Exercises,8 weeks 2 sessions per week
+75,70,55,75,40,55,50,65,35,50,55,25,75,Lumbar Strain,Core Stabilization Exercises,6 weeks 3 sessions per week
+85,75,65,80,50,65,60,70,40,55,65,30,85,Muscle Strain,Postural Training,8 weeks 3 sessions per week
+40,60,50,70,35,50,45,65,25,45,50,20,65,Disc Herniation,Passive Stretching,As needed ongoing
+60,65,55,75,40,60,55,70,30,50,55,22,75,Disc Herniation,Isometric Exercises,8–10 weeks 2 sessions per week
+70,75,60,80,50,65,60,75,35,55,65,28,85,Spondylitis,Neuromuscular Reeducation,6 weeks 3 sessions per week
+95,80,70,85,60,70,65,80,40,60,70,30,90,Disc Herniation,Functional Stretching,8–10 weeks 2 sessions per week
+30,45,35,50,25,40,35,55,20,30,40,15,55,Spinal Stenosis,Resistance Band Exercises,8–10 weeks 2 sessions per week
+45,60,50,65,30,50,45,60,25,35,45,18,65,Spinal Stenosis,Manual Muscle Testing,4–6 weeks weekly
+75,70,60,75,45,55,50,65,30,50,55,22,75,Spinal Stenosis,Core Balance Training,6–8 weeks 3 sessions per week
+90,85,75,80,55,65,60,70,40,60,70,28,90,Spinal Stenosis,Therapeutic Exercise,10 weeks weekly
+55,60,75,45,50,50,80,75,55,45,90,19,55,Radiculopathy,Core Stabilization Exercises,6 weeks 3 sessions per week
+50,50,45,55,20,70,60,65,95,55,30,31,35,Spondylolisthesis,Stabilization Exercises,8 weeks 2 sessions per week
+45,70,55,65,80,90,30,45,75,85,60,61,95,Spondylolisthesis,Aquatic Therapy,6 weeks twice a week
+65,40,25,85,60,40,40,25,45,25,80,91,75,Spondylolisthesis,Acupuncture,2 sessions per week for 4 weeks
+85,30,65,35,40,60,50,95,35,75,70,25,65,Spondylolisthesis,Functional Movement Training,4–6 weeks 1 session per week
+75,70,55,75,40,55,50,65,35,50,55,25,75,Chronic Back Pain,Core Stabilization Exercises,6 weeks 3 sessions per week
+85,75,65,80,50,65,60,70,40,55,65,30,85,Muscle Strain,Postural Training,8 weeks 3 sessions per week
+100,80,70,75,60,70,65,75,40,60,65,22,85,Lumbar Strain,Core Stabilization,6–8 weeks 3 sessions per week
+50,45,40,55,30,45,40,60,20,35,45,14,55,Sciatica,Massage Therapy,4–6 weeks 2–3 sessions per week
+100,80,70,75,65,75,70,80,40,60,65,32,85,Chronic Back Pain,Posture Correction Exercises,6–8 weeks 3 sessions per week
+25,40,30,45,20,35,30,55,15,30,40,10,45,Facet Joint Syndrome,Heat Therapy (e.g. heating pad),10–15 minutes as needed
+75,60,50,70,45,60,55,70,30,50,55,20,70,Osteoarthritis,Pilates,6–8 weeks 3 sessions per week
+100,70,65,80,60,70,65,80,35,55,60,28,85,Chronic Back Pain,Manual Therapy,4–6 weeks 1–2 sessions per week
+25,50,40,60,25,45,40,55,20,35,45,18,55,Osteoarthritis,Stretching Exercises,Ongoing as needed
+100,80,70,85,60,70,65,80,40,60,70,35,90,Kyphosis,Functional Strength Training,6–8 weeks 3 sessions per week
+100,80,70,75,60,70,65,75,40,60,65,22,85,Spondylitis,Core Stabilization,6–8 weeks 3 sessions per week
+50,45,40,55,30,45,40,60,20,35,45,14,55,Spondylitis,Massage Therapy,4–6 weeks 2–3 sessions per week
+60,50,55,70,35,50,50,65,30,45,55,18,65,Spondylitis,Heat Therapy (e.g. heating pad),As needed typically short-term
+70,60,65,80,40,55,55,70,35,50,60,20,75,Muscle Spasm,Strengthening Exercises for Core,6–8 weeks 3 sessions per week
+80,70,75,85,45,60,60,75,40,55,65,25,80,Muscle Spasm,Chiropractic Care,6–8 weeks 2–3 sessions per week
+30,50,35,55,25,45,40,55,20,35,45,15,50,Muscle Spasm,Acupuncture,2 sessions per week for 4 weeks
+55,65,45,70,30,55,50,60,25,40,55,20,60,Lumbago,Aquatic Therapy,6 weeks twice a week
+65,70,55,75,35,60,55,65,30,45,60,22,70,Lumbago,McKenzie Method Exercises,8–10 weeks 2 sessions per week
+90,80,65,85,45,65,60,70,40,55,65,30,80,Lumbago,Trigger Point Therapy,6 weeks weekly 4 sessions
+35,45,30,50,25,40,35,55,20,35,40,18,55,Fibromyalgia,Functional Movement Training,4–6 weeks 1 session per week
+50,55,45,60,30,50,45,60,25,40,50,18,65,Fibromyalgia,Stabilization Exercises,8 weeks 2 sessions per week
+75,70,55,75,40,55,50,65,35,50,55,25,75,Fibromyalgia,Core Stabilization Exercises,6 weeks 3 sessions per week
+85,75,65,80,50,65,60,70,40,55,65,30,85,Cervical Radiculopathy,Postural Training,8 weeks 3 sessions per week
+40,60,50,70,35,50,45,65,25,45,50,20,65,Cervical Radiculopathy,Passive Stretching,As needed ongoing
+25,50,40,60,25,45,40,55,20,35,45,18,55,Cervical Radiculopathy,Stretching Exercises,Ongoing as needed
+50,60,50,70,40,55,50,60,25,45,55,22,65,Sacroiliac Joint Dysfunction,Spinal Decompression Therapy,4–6 weeks 2 sessions per week
+75,70,60,75,50,60,55,70,30,50,60,18,75,Sacroiliac Joint Dysfunction,Neuromuscular Massage,2 sessions per week for 6 weeks
+100,80,70,85,60,70,65,80,40,60,70,35,90,Sacroiliac Joint Dysfunction,Functional Strength Training,6–8 weeks 3 sessions per week
+25,45,35,50,30,40,35,55,15,25,35,8,50,Facet Joint Dysfunction,NSAIDs,As needed typically short-term
+50,55,45,65,40,50,45,60,25,35,45,12,60,Facet Joint Dysfunction,Aquatic Therapy,6–8 weeks 2–3 sessions per week
+75,60,55,70,50,60,55,65,35,50,55,22,70,Facet Joint Dysfunction,Epidural Steroid Injections,Typically 1 injection every 3 months
+100,80,70,75,65,75,70,80,40,60,65,32,85,Spinal Stenosis,Posture Correction Exercises,6–8 weeks 3 sessions per week
+25,40,30,45,20,35,30,55,15,30,40,10,45,Facet Joint Syndrome,Heat Therapy (e.g. heating pad),10–15 minutes as needed
+50,55,45,60,35,50,45,60,25,40,50,18,60,Lumbar Strain,Chiropractic Care,4–6 weeks 1–2 sessions per week
+75,60,50,70,45,55,50,65,30,50,55,22,70,Facet Joint Syndrome,Trigger Point Injections,1 injection every few weeks as needed
+100,80,70,75,60,70,65,75,35,55,60,28,85,Facet Joint Syndrome,Spinal Manipulation,As determined by a healthcare provider
+25,45,40,55,30,40,35,50,15,30,40,10,50,Degenerative Disc Disease,Rest and Activity Modification,Short-term as needed
+50,60,50,65,40,50,45,60,25,45,50,16,60,Kyphosis,Postural Training,6–8 weeks 2–3 sessions per week
+75,70,60,75,50,60,55,70,30,50,55,20,70,Degenerative Disc Disease,Spinal Decompression Therapy,4–6 weeks 2 sessions per week
+100,80,70,80,60,70,65,75,40,60,65,28,85,Myofascial Pain Syndrome,Massage Therapy,4–6 weeks 1–2 sessions per week
+25,40,35,50,25,45,40,55,20,35,45,15,50,Osteoarthritis,NSAIDs,As needed typically short-term

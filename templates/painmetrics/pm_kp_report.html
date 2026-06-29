@@ -1,0 +1,237 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <base href="/static/painmetrics/home/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Painmetrics KneePain Report</title>
+
+  <link href="//fonts.googleapis.com/css?family=Mukta:300,400,500" rel="stylesheet">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="assets/css/style-starter.css">
+</head>
+<body>
+<!--header-->
+
+<header id="site-header" class="fixed-top">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg stroke px-0 pt-lg-0">
+            <h1>
+                <a class="navbar-brand" href="/pm_home/">
+                    <span class="fa fa-exclamation-triangle"></span> PAINMETRICS
+                </a>
+            </h1>
+            <button class="navbar-toggler collapsed bg-gradient" type="button" data-toggle="collapse"
+                data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pm_home/">HOME <span class="sr-only">(current)</span></a>
+                    </li>
+                    <!-- Dropdown for Requirements -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="requirementsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            SYMPTOMS <span class="fa fa-caret-down"></span>
+                        </a>
+                        <div class="dropdown-menu two-column-dropdown" aria-labelledby="requirementsDropdown">
+                            <a class="dropdown-item" href="/pm_bp_req/">BACK PAIN</a>
+                            <a class="dropdown-item" href="/pm_kp_req/">KNEE PAIN</a>
+                        </div>
+                    </li>
+                    <!-- Dropdown for Analyze -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="analyzeDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            ANALYZE <span class="fa fa-caret-down"></span>
+                        </a>
+                        <div class="dropdown-menu two-column-dropdown" aria-labelledby="analyzeDropdown">
+                            <a class="dropdown-item" href="/pm_bp_analyze/">BACK PAIN</a>
+                            <a class="dropdown-item" href="/pm_kp_analyze/">KNEE PAIN</a>
+                        </div>
+                    </li>
+                    <!-- Dropdown for Report -->
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="reportDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            REPORT <span class="fa fa-caret-down"></span>
+                        </a>
+                        <div class="dropdown-menu two-column-dropdown" aria-labelledby="reportDropdown">
+                            <a class="dropdown-item" href="/pm_bp_report/">BACK PAIN</a>
+                            <a class="dropdown-item active" href="/pm_kp_report/">KNEE PAIN</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pm_logout/">LOGOUT</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<script>
+  {% for message in messages %}
+    alert('{{ message }}');
+  {% endfor %}
+</script>
+
+<!-- main-slider -->
+<section class="w3l-main-slider" id="home">
+  <div class="companies20-content">
+    <div class="slider-info banner-view bg bg2">
+      <h2 style="text-align:center; color:white; margin-bottom: -120px;">
+        KNEE PAIN REPORT
+      </h2>
+      {% comment %} <div class="table-container" style="margin-top: -450px;"> <!-- Adjusted margin-top --> {% endcomment %}
+      <div style="max-height:400vh; overflow: auto; margin-bottom:200px; width:80%; margin-left:10%;">
+        <table class="custom-table">
+          <thead>
+            <tr style="text-align:center;">
+              <th>CLIENT ID</th>
+              <th>TYPE OF PAIN</th>
+              <th>PAIN(%)</th>
+              <th>SWELLING(%)</th>
+              <th>STIFFNESS(%)</th>
+              <th>WARMTH AND REDNESS(%)</th>
+              <th>WEAKNESS OR INSTABILITY(%)</th>
+              <th>POPPING OR GRINDING SENSATION(%)</th>
+              <th>LIMITED RANGE OF MOTION(%)</th>
+              <th>PAIN WITH CERTAIN MOVEMENT(%)</th>
+              <th>TENDERNESS(%)</th>
+              <th>BEARING WEIGHT(%)</th>
+              <th>SEVERITY(%)</th>
+              <th>TYPE OF KNEEPAIN</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for i in obj %}
+            {% if obj and i.pm_kp_scan is True %}
+              
+                {% if i.type_of_pain == "knee_pain" %}
+                  <tr style="text-align:center;">
+                    <td>{{ i.cl_rh_id }}</td>
+                    <td>{{ i.type_of_pain }}</td>
+                    <td>{{ i.pain }}</td>
+                    <td>{{ i.swelling }}</td>
+                    <td>{{ i.stiffness }}</td>
+                    <td>{{ i.warmth_and_redness }}</td>
+                    <td>{{ i.weakness_or_instability }}</td>
+                    <td>{{ i.popping_or_grinding_sensation }}</td>
+                    <td>{{ i.limites_range_of_motion }}</td>
+                    <td>{{ i.pain_with_certain_movements }}</td>
+                    <td>{{ i.tenderness }}</td>
+                    <td>{{ i.bearing_weight }}</td>
+                    <td>{{ i.severity }}</td>
+                    <td>{{ i.type_of_kneepain }}</td>
+
+                {% endif %}
+                  </tr>  
+            {% elif i.pm_kp_scan is False and i.type_of_pain == "knee_pain" %}
+              <tr>
+                <td colspan="21" style="text-align:center;">No Data Found</td>
+              </tr>
+            {% endif %}
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--For Button-->
+<style>
+  .scan-button {
+      background-color: #28a745; /* Green color */
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px; /* Rounded corners */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+      cursor: pointer;
+      transition: all 0.3s ease; /* Smooth transition */
+  }
+
+  .scan-button:hover {
+      background-color: #218838; /* Darker green on hover */
+      transform: scale(1.05); /* Slightly increase size on hover */
+      box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25); /* Enhanced shadow on hover */
+  }
+
+  .scan-button:active {
+      transform: scale(1); /* Reset size on click */
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow on click */
+  }
+</style>
+
+
+<!--For Table-->
+<style>
+/* Centering and styling table */
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.custom-table {
+  width: 100%;
+  max-width: 1300px;
+  border-collapse: collapse;
+  font-size: 16px;
+  text-align: left;
+}
+
+.custom-table thead tr {
+  background-color: #ce6d06;
+  color: #ffffff;
+}
+
+.custom-table th, .custom-table td {
+  padding: 12px 15px;
+  border: 1px solid #dddddd;
+}
+
+.custom-table tbody tr {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.custom-table tbody tr:nth-child(even) {
+  background-color: #f3f3f3;
+}
+</style>
+
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="assets/js/theme-change.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('.popup-with-zoom-anim').magnificPopup({
+      type: 'inline',
+      fixedContentPos: false,
+      fixedBgPos: true,
+      overflowY: 'auto',
+      closeBtnInside: true,
+      preloader: false,
+      midClick: true,
+      removalDelay: 300,
+      mainClass: 'my-mfp-zoom-in'
+    });
+  });
+</script>
+<script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>

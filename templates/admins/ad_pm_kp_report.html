@@ -1,0 +1,251 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <base href="/static/admins/home/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Admins Client Approve</title>
+    <!-- google-fonts -->
+    <link
+        href="//fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- //google-fonts -->
+    <!-- Template CSS Style link -->
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <script>
+        {% for message in messages %}
+            alert('{{ message }}');
+        {% endfor %}
+    </script>
+    <!--header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg stroke">
+                <h1>
+                    <a class="navbar-brand" href="/admins_home/"><i class="fa fa-user-circle mr-1" aria-hidden="true"></i>ADMIN</a>
+                </h1>
+                <button class="navbar-toggler bg-gradient" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ml-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admins_home/">HOME</a>
+                        </li>
+                        <!-- Manage Log Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="manageLogDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                MANAGE LOG <i class="fa fa-caret-down"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="manageLogDropdown">
+                                <a class="dropdown-item" href="/cl_approve/">CLIENT <span class="sr-only">(current)</span></a>
+                                <a class="dropdown-item" href="/pm_approve/">PAINMETRICS</a>
+                                <a class="dropdown-item" href="/rt_approve/">RELIEFTHERAPY</a>
+                                <a class="dropdown-item" href="/ef_approve/">EFFECTIVENESS</a>
+                            </div>
+                        </li>
+                        <!-- Reports Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="reportsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                BACKPAIN REPORTS <i class="fa fa-caret-down"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="reportsDropdown">
+                                <a class="dropdown-item" href="/ad_cl_bp_report/">CLIENT</a>
+                                <a class="dropdown-item" href="/ad_pm_bp_report/">PAINMETRICS</a>
+                                <a class="dropdown-item" href="/ad_rt_bp_report/">RELIEFTHERAPY</a>
+                                <a class="dropdown-item" href="/ad_ef_bp_report/">EFFECTIVENESS</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="#" id="reportsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               KNEEPAIN REPORTS <i class="fa fa-caret-down"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="reportsDropdown">
+                                <a class="dropdown-item" href="/ad_cl_kp_report/">CLIENT</a>
+                                <a class="dropdown-item active" href="/ad_pm_kp_report/">PAINMETRICS</a>
+                                <a class="dropdown-item" href="/ad_rt_kp_report/">RELIEFTHERAPY</a>
+                                <a class="dropdown-item" href="/ad_ef_kp_report/">EFFECTIVENESS</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="reportsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               STATUS <i class="fa fa-caret-down"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="reportsDropdown">
+                                <a class="dropdown-item" href="/bp_admins_status/">BACK PAIN</a>
+                                <a class="dropdown-item" href="/kp_admins_status/">KNEE PAIN</a>    
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admins_logout/">LOGOUT</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- toggle switch for light and dark theme -->
+                <div class="cont-ser-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+    <!--//header-->
+
+    <!-- banner section -->
+    <section class="w3l-banner pt-5">
+        <div class="container">
+           
+            <!-- Centered Table Section -->
+<!-- Centered Table Section -->
+<section class="table-container">
+    <h1 style="text-align:center; color:white;  margin-bottom: 30px;">PAINMETRICS KNEEPAIN REPORT</h1> <!-- Increased margin-bottom -->
+    <div style="overflow: auto; width:110%">
+    <table>
+        <thead>
+            <tr style="text-align:center">
+                <th>CLIENT ID</th>
+                <th>TYPE OF PAIN</th>
+                <th>PAIN(%)</th>
+                <th>SWELLING(%)</th>
+                <th>STIFFNESS(%)</th>
+                <th>WARMTH AND REDNESS(%)</th>
+                <th>WEAKNESS OR INSTABILITY(%)</th>
+                <th>POPPING OR GRINDING SENSATION(%)</th>
+                <th>LIMITED RANGE OF MOTION(%)</th>
+                <th>PAIN WITH CERTAIN MOVEMENT(%)</th>
+                <th>TENDERNESS(%)</th>
+                <th>BEARING WEIGHT(%)</th>
+                <th>SEVERITY(%)</th>
+                <th>TYPE OF KNEEPAIN</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% if data %}
+            {% for i in data %}
+            {% if i.pm_kp_scan is True %}
+            <tr style="text-align:center">
+                <td>{{ i.cl_rh_id }}</td>
+                <td>{{ i.type_of_pain }}</td>
+                <td>{{ i.pain }}</td>
+                <td>{{ i.swelling }}</td>
+                <td>{{ i.stiffness }}</td>
+                <td>{{ i.warmth_and_redness }}</td>
+                <td>{{ i.weakness_or_instability }}</td>
+                <td>{{ i.popping_or_grinding_sensation }}</td>
+                <td>{{ i.limites_range_of_motion }}</td>
+                <td>{{ i.pain_with_certain_movements }}</td>
+                <td>{{ i.tenderness }}</td>
+                <td>{{ i.bearing_weight }}</td>
+                <td>{{ i.severity }}</td>
+                <td>{{ i.type_of_kneepain }}</td>
+            </tr>
+        </tr>
+        {% else %}
+        <tr style="background-color:white;">
+            <td colspan=13 style="text-align:center">No Data</td>
+        </tr>
+        {% endif %}
+        
+            {% endfor %}
+            {% else %}
+            <tr style="background-color:white;">
+                <td colspan=13 style="text-align:center">No Data</td>
+            </tr>
+            {% endif %}
+        </tbody>
+    </table>
+</div>
+</section>
+
+
+            <!-- Scripts -->
+            <script src="assets/js/jquery-3.3.1.min.js"></script>
+            <script src="assets/js/theme-change.js"></script>
+            <script src="assets/js/jquery.magnific-popup.min.js"></script>
+            <script src="assets/js/counter.js"></script>
+            <script src="assets/js/bootstrap.min.js"></script>
+        </div>
+    </section>
+    <!-- //banner section -->
+
+    <style>
+        
+        .table-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Changed to column to center title and table vertically */
+            height: 90vh;
+            
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #f8f9fa;
+        }
+        th, td {
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #e80566 ;
+            color: white;
+        }
+    </style>
+
+    <!-- Js scripts -->
+    <!-- common jquery plugin -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <!-- //common jquery plugin -->
+
+    <!-- theme switch js (light and dark) -->
+    <script src="assets/js/theme-change.js"></script>
+    <script>
+        function autoType(elementClass, typingSpeed) {
+            var thhis = $(elementClass);
+            thhis.css({
+                "position": "relative",
+                "display": "inline-block"
+            });
+            var text = thhis.text().trim().split("");
+            thhis.text("");
+            $.each(text, function (i) {
+                setTimeout(function () {
+                    thhis.append(text[i]);
+                }, i * typingSpeed);
+            });
+        }
+        $(document).ready(function () {
+            autoType(".auto-text", 100);
+        });
+    </script>
+</body>
+</html>

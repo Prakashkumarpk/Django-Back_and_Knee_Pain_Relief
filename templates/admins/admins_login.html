@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<base href="/static/admins/login/">
+<title>Admins Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Blend  Login Form template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/font-awesome.css" rel="stylesheet"> <!-- Font-Awesome-Icons-CSS -->
+
+<!-- //Custom Theme files -->
+<!-- web font --> 
+<link href="//fonts.googleapis.com/css?family=Vollkorn+SC:400,600,700,900&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Acme" rel="stylesheet"> 
+<!-- //web font --> 
+<style>
+    .password-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    .password-container input {
+        width: calc(100% - 40px);
+        padding-right: 40px; /* Leave space for the eye icon */
+    }
+    .password-container .toggle-password {
+        position: absolute;
+        right: 10px;
+        cursor: pointer;
+        color: black;
+    }
+</style>
+</head>
+<body>
+	<script>
+        {% for message in messages %}
+            alert('{{ message }}');
+        {% endfor %}
+    </script>
+	<!-- main -->
+	<div class="main">
+		<h1 style="color:Black">Admin Login Form</h1>
+		<div class="main-w3lsrow">
+			<!-- login form -->
+			<div class="login-form login-form-left"> 
+				<div class="agile-row">
+					<h2 style="color:Black">Login Here</h2> 
+					<div class="login-agileits-top" > 	
+						<form action="/admins_login/" method="POST"> 
+							{% csrf_token %}
+							<p style="color:Black">Email </p>
+							<input name="email" type="text" class="name" autocomplete="off" required="">
+							<b><p style="color:Black">Password</p></b>
+							<div class="password-container">
+								<input id="password" name="password" type="password" class="password" autocomplete="off" required="">
+								<span class="toggle-password" onclick="togglePassword()">
+									<i class="fa fa-eye" id="toggleIcon"></i>
+								</span>
+							</div>
+							<input type="submit" value="Login"> 
+							 
+						</form> 
+						<a href="/"><input type="submit" value="Back">	</a>
+					</div> 
+				</div>  
+			</div>  
+		</div>	
+	</div>	
+
+	<!-- Script to toggle password visibility -->
+	<script>
+		function togglePassword() {
+			const passwordField = document.getElementById('password');
+			const toggleIcon = document.getElementById('toggleIcon');
+			if (passwordField.type === 'password') {
+				passwordField.type = 'text';
+				toggleIcon.classList.remove('fa-eye');
+				toggleIcon.classList.add('fa-eye-slash');
+			} else {
+				passwordField.type = 'password';
+				toggleIcon.classList.remove('fa-eye-slash');
+				toggleIcon.classList.add('fa-eye');
+			}
+		}
+	</script>
+	<!-- //main --> 
+</body>
+</html>

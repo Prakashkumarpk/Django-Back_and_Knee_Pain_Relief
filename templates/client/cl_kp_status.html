@@ -1,0 +1,194 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <base href="/static/client/home/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Client Status</title>
+    <!-- Google Fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- CSS Style Link -->
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+</head>
+
+<body>
+    <script>
+        {% for message in messages %}
+            alert('{{ message }}');
+        {% endfor %}
+    </script>
+
+    <!-- Header -->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg stroke">
+                <h1>
+                    <a class="navbar-brand" href="/cl_home/">
+                        <i class="fas fa-user mr-1"></i>CLIENT
+                    </a>
+                </h1>
+                <button class="navbar-toggler collapsed bg-gradient" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ml-lg-auto">
+                        <li class="nav-item"><a class="nav-link" href="/cl_home/">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/cl_req/">SYMPTOMS</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="reportDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                POST THERAPY EVALUATION <i class="fas fa-caret-down ml-1"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-two-column" aria-labelledby="reportDropdown">
+                                <a class="dropdown-item" href="/cl_bp_pte/">BACK PAIN</a>
+                                <a class="dropdown-item" href="/cl_kp_pte/">KNEE PAIN</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="#" id="statusDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                STATUS <i class="fas fa-caret-down ml-1"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-two-column" aria-labelledby="statusDropdown">
+                                <a class="dropdown-item" href="/cl_bp_status/">BACK PAIN</a>
+                                <a class="dropdown-item active" href="/cl_kp_status/">KNEE PAIN</a>
+                            </div>
+                        </li>
+                        
+                        
+                        <li class="nav-item"><a class="nav-link" href="/cl_logout/">LOGOUT</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="w3l-main-slider position-relative" id="home">
+        <div class="banner-view d-flex align-items-center justify-content-center" style="height: 100vh;">
+            <div class="table-container d-flex justify-content-center align-items-center flex-column">
+                <h2 style="text-align: center; color: black; margin-bottom: 20px;">STATUS</h2>
+                <div style="overflow: auto; width:95%">
+                <table class="custom-table">
+                    
+                    <thead>
+                        <tr style="text-align:center;">
+                            <th>CLIENT ID</th>
+                            <th>TYPE OF PAIN</th>
+                            <th>PAIN</th>
+                            <th>SWELLING</th>
+                            <th>STIFFNESS</th>
+                            <th>WARMTH AND REDNESS</th>
+                            <th>WEAKNESS OR INSTABILITY</th>
+                            <th>POPPING OR GRINDING SENSATION</th>
+                            <th>LIMITES RANGE OF MOTION</th>
+                            <th>PAIN WITH CERTAIN MOVEMENT</th>
+                            <th>TENDERNESS</th>
+                            <th>BEARING WEIGHT</th>
+                            <th>STATUS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if obj %}
+                        {% for i in obj %}
+                            
+                        {% if i.type_of_pain == "knee_pain" %}
+                        <tr style="text-align:center;">
+                            <td>{{i.cl_rh_id}}</td>
+                            <td>{{i.type_of_pain}}</td>
+                            <td>{{i.pain}}</td>
+                            <td>{{i.swelling}}</td>
+                            <td>{{i.stiffness}}</td>
+                            <td>{{i.warmth_and_redness}}</td>
+                            <td>{{i.weakness_or_instability}}</td>
+                            <td>{{i.popping_or_grinding_sensation}}</td>
+                            <td>{{i.limites_range_of_motion}}</td>
+                            <td>{{i.pain_with_certain_movements}}</td>
+                            <td>{{i.tenderness}}</td>
+                            <td>{{i.bearing_weight}}</td>
+                            <td>{{i.status}}</td>    
+                        </tr>
+                                {% else %}
+                            <tr>
+                                <td colspan=21 style="text-align:center;">No Data Found</td>
+                            </tr>
+                    
+                                {% endif %}
+                                {% endfor %}
+                            {% else %}
+                            <tr>
+                                <td colspan=21 style="text-align:center;">No Data Found</td>
+                            </tr>
+                            {% endif %}
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <style>
+        /* Centering and styling table */
+        .table-container {
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 16px;
+            text-align: left;
+        }
+
+        .custom-table thead tr {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+
+        .custom-table th, .custom-table td {
+            padding: 12px 15px;
+            border: 1px solid #dddddd;
+        }
+
+        .custom-table tbody tr {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .custom-table tbody tr:nth-child(even) {
+            background-color: #f3f3f3;
+        }
+    </style>
+
+    <!-- Js Scripts -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/theme-change.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <script>
+        // Show the knee pain options when knee pain is selected
+        document.getElementById("painType").addEventListener("change", function() {
+            const kneePainOptions = document.getElementById("kneePainOptions");
+            if (this.value === "Knee Pain") {
+                kneePainOptions.style.display = "block";
+            } else {
+                kneePainOptions.style.display = "none";
+                document.getElementById("kneePainType").value = ""; // Reset knee pain type selection
+                document.getElementById("symptoms").innerHTML = '<option value="">Select</option>'; // Reset symptoms
+            }
+        });
+        
+        // Show numeric input fields after submitting the form
+        document.getElementById("dynamicInputs").style.display = "block";
+    </script>
+</body>
+
+</html>

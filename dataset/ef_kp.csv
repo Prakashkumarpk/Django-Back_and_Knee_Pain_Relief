@@ -1,0 +1,52 @@
+pain,swelling,stiffness,warmth_and_redness,weakness_or_instability,popping_or_grinding_sensation,limites_range_of_motion,pain_with_certain_movements,tenderness,bearing_weight,severity,type_of_knee_pain,therapy,duration,r_pain_intensity_before_therapy,r_pain_intensity_after_therapy,r_overall_relief_preception,r_swelling,r_stiffness,r_warmth_and_redness,r_weakness_or_instability,r_popping_or_grinding_sensation,r_limited_range_of_motion,r_pain_with_certain_movements,r_tenderness,r_bearing_weight,effectiveness
+45,59,55,41,65,33,40,50,47,65,43,Meniscus Tears,Proprioceptive Therapy,20–30 minutes twice a week,65,45,51,60,55,72,49,67,35,29,48,44,73
+45,59,55,41,65,33,40,50,47,65,43,Meniscus Tears,Proprioceptive Therapy,20–30 minutes twice a week,65,45,51,60,55,72,49,67,35,29,48,44,73
+62,70,58,45,66,55,50,60,55,70,52,Osteoarthritis,Hydrotherapy,2 sessions per week for 4 weeks,70,60,65,72,60,80,55,75,40,32,53,50,80
+50,60,50,42,63,45,48,52,49,63,45,Bursitis,Soft Tissue Mobilization,15 minutes daily,63,50,58,64,62,75,47,66,33,28,49,42,75
+65,75,70,55,72,60,62,68,66,75,58,ACL Injury,Neuromuscular Reeducation,3 sessions per week for 6 weeks,75,68,72,80,78,85,60,78,45,38,58,53,85
+40,55,52,38,60,48,42,55,45,58,40,Tendinitis,Resistance Band Training,25 minutes 3 times per week,58,50,55,65,60,73,49,68,40,35,50,45,70
+57,68,60,50,70,53,55,62,60,68,50,PCL Injury,Knee Extension Exercises,4 weeks twice weekly,68,60,65,72,69,80,55,75,50,42,53,49,78
+48,58,55,45,62,50,46,52,50,60,44,Ligament Sprain,Therapeutic Ultrasound,2 sessions per week 6 weeks,60,53,58,66,64,77,50,72,45,39,51,46,77
+60,70,65,50,75,57,60,65,63,72,54,MCL Tear,Balance Training,20–25 minutes twice a week,72,64,70,78,75,80,60,78,53,45,58,52,80
+52,63,59,47,67,52,54,59,55,68,48,Kneecap Dislocation,Kinesiology Taping,Daily application for 2 weeks,68,55,62,70,68,80,58,75,48,42,52,47,78
+55,65,60,49,68,55,57,61,59,69,49,Patellar Tracking Disorder,Quadriceps Strengthening,3 sessions per week for 8 weeks,69,60,65,75,72,85,60,80,48,40,54,50,82
+46,60,53,40,61,48,49,56,51,62,45,Chondromalacia Patella,Functional Movement Exercises,10 minutes daily,62,55,60,70,65,80,52,75,47,38,51,46,81
+68,80,72,58,80,63,64,70,68,77,60,Articular Cartilage Damage,Manual Therapy,Weekly for 6 weeks,77,70,75,80,78,85,65,82,55,48,60,55,85
+59,73,67,53,74,58,60,66,62,74,55,Patellar Tendonitis,Active Release Technique,10–15 minutes daily,74,64,70,78,75,85,60,82,56,50,58,54,84
+64,78,69,56,78,61,63,71,70,78,57,Fracture,Progressive Weight Bearing,As tolerated,78,72,76,82,80,90,68,85,58,51,61,56,87
+61,72,68,54,75,60,61,67,65,74,56,Joint Infection,Hot and Cold Therapy,Daily alternating,74,67,72,80,78,90,65,88,56,49,59,54,89
+60,74,71,55,76,62,65,69,64,76,59,Osteochondritis Dissecans,Gait Training,20 minutes per day,76,70,75,82,80,92,67,88,58,50,60,55,90
+53,66,60,48,69,54,56,60,58,70,50,Prepatellar Bursitis,Stretching Routine,10–15 minutes daily,70,58,63,76,73,88,58,90,50,42,54,50,90
+56,69,63,49,72,57,58,64,61,73,51,Patellofemoral Pain Syndrome,Foot Orthotics,Daily usage as needed,73,60,65,78,75,90,62,92,55,47,56,51,91
+58,74,65,51,74,60,62,67,64,75,54,Meniscal Tear,Joint Mobilization,15 minutes 3 times per week,75,64,69,80,78,92,64,95,58,50,59,54,92
+55,70,62,50,73,59,60,65,62,74,53,Arthritis,Low Impact Aerobics,20 minutes per day,74,62,67,78,75,92,63,98,55,48,57,52,94
+50,67,58,46,68,55,58,63,60,72,52,Quadriceps Tendonitis,Hamstring Stretching,10–15 minutes daily,72,60,65,78,76,93,60,98,57,49,58,53,96
+63,76,69,54,77,61,64,70,67,75,57,Bakers Cyst,Elevation and Compression,Daily for 2–4 weeks,75,64,70,80,78,94,62,67,58,50,59,54,98
+62,74,68,52,75,60,63,68,65,74,56,Plica Syndrome,Icing,10–15 minutes 3 times daily,74,65,70,80,77,95,63,50,59,51,60,55,99
+59,73,65,51,74,59,61,66,64,73,55,Popliteal Cyst,Aqua Jogging,15–20 minutes 3 times weekly,73,62,68,80,78,95,60,42,57,49,59,54,100
+67,79,71,57,79,62,65,71,69,78,58,Cartilage Tear,Joint Compression Wrap,Daily as needed,78,67,72,83,80,86,62,45,60,53,62,57,53
+68,80,72,58,80,63,64,70,68,77,60,Patellar Dislocation,Knee Bracing,Daily wear for 4–6 weeks,77,70,75,85,82,98,65,68,61,55,62,59,84
+61,73,66,53,76,60,62,68,66,74,56,Fractured Patella,Walking Boot,Daily 6–8 weeks,74,65,70,83,80,91,65,51,58,51,61,56,76
+60,72,67,55,77,61,64,69,66,75,57,Knee Ligament Injury,High-Intensity Interval Training (HIIT),Once a week for 8 weeks,75,67,72,85,82,80,68,72,59,52,63,58,78
+55,68,62,50,71,60,62,68,65,72,56,Patellar Tendonopathy,Ice Therapy,10 minutes daily,72,64,68,78,75,90,65,95,58,50,59,54,92
+62,75,69,53,74,62,64,70,68,76,59,Chronic Knee Pain,Massage Therapy,15 minutes twice per week,76,67,72,82,80,95,68,50,60,53,61,56,54
+60,72,67,55,76,61,64,69,66,75,57,Knee Ligament Strain,Knee Strengthening,20 minutes 3 times per week,75,68,72,84,82,48,69,40,61,54,62,58,48
+58,74,66,54,75,59,62,68,66,75,58,Meniscal Tear,Knee Flexion Exercises,10 minutes daily,74,65,70,80,78,90,64,30,60,52,61,56,39
+57,70,63,52,74,60,61,66,64,73,55,Osteoarthritis,Hot Pack Application,15 minutes daily,73,64,68,82,79,95,66,20,59,51,60,55,29
+61,73,67,54,76,63,65,69,67,74,56,Anterior Cruciate Ligament Injury,Physical Therapy,2 sessions per week for 8 weeks,74,66,71,83,81,37,69,30,60,52,61,56,30
+64,78,71,56,79,65,68,73,71,79,59,Knee Fracture,Weight-bearing Exercise,Daily for 6 weeks,79,70,74,86,83,28,67,20,62,55,63,57,20
+60,72,66,53,75,62,64,70,67,75,59,Patellar Tracking Disorder,Strengthening Exercises,15 minutes 3 times per week,76,68,73,85,83,89,70,80,61,54,62,58,81
+63,76,69,55,78,64,67,72,70,78,60,Joint Pain,Electrotherapy,20 minutes twice a week,78,70,74,87,85,70,72,70,63,56,64,59,72
+62,74,68,53,77,63,65,71,69,77,59,Cartilage Degeneration,Strength Training,3 sessions per week for 8 weeks,77,69,73,88,86,62,71,60,64,57,65,60,62
+65,79,73,56,80,66,69,75,72,80,61,Ligament Strain,Acupuncture,Once per week for 4 weeks,80,72,76,89,87,53,74,50,66,59,67,62,53
+62,77,70,55,79,64,67,73,71,79,60,Chronic Patella Tendinopathy,Stretching and Strengthening,25 minutes 4 times per week,79,70,75,90,88,45,74,40,65,58,68,61,44
+63,75,69,54,78,64,67,73,71,78,59,Meniscal Injury,Rest and Recovery,Daily for 2 weeks,78,71,75,91,89,36,75,30,67,60,69,63,35
+60,71,65,52,74,62,64,70,67,75,59,ACL Reconstruction,Joint Mobilization,15 minutes daily,75,67,71,85,83,91,72,90,64,58,66,60,96
+59,74,67,51,72,60,63,69,66,74,58,Patellofemoral Pain Syndrome,Isometric Strengthening,20 minutes 3 times per week,74,68,72,84,81,98,69,80,63,56,64,59,87
+61,77,70,54,76,63,66,72,70,78,60,Chondromalacia,Ultrasound Therapy,10 minutes daily,78,70,75,86,84,72,71,70,65,58,67,60,78
+64,79,72,56,79,65,69,74,72,80,61,Joint Instability,Proprioception Training,3 sessions per week for 6 weeks,80,72,76,88,86,64,74,60,66,59,68,62,69
+60,74,69,53,77,64,67,73,71,79,59,Knee Sprain,Knee Rehabilitation,2 sessions per week for 4 weeks,79,71,74,89,87,55,75,50,68,61,69,63,51
+63,76,70,55,79,65,68,74,72,80,60,Cartilage Wear,Therapeutic Massage,Weekly for 5 weeks,80,73,77,90,88,66,76,40,69,62,70,64,41
+62,75,69,54,78,64,67,73,71,78,59,Meniscal Injury,Strengthening and Mobility Exercises,20 minutes 3 times per week,78,71,75,91,89,57,77,40,70,63,71,65,62
+66,80,73,57,80,66,69,75,73,81,62,Chronic Ligament Injury,Heat Therapy,15 minutes twice daily,81,74,78,92,90,78,79,60,72,64,73,66,53
+

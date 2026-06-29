@@ -1,0 +1,418 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+     <base href="/static/home/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home</title>
+    <!-- google-fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- //google-fonts -->
+    <!-- Template CSS Style link -->
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+</head>
+
+<body>
+    <script>
+        {% for message in messages %}
+            alert('{{ message }}');
+        {% endfor %}
+    </script>
+    <!--header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg stroke">
+                <h1>
+                    <a class="navbar-brand d-flex align-items-center" href="/">
+                        Knee and Back Relief</a>
+                </h1>
+                <!-- if logo is image enable this   
+    <a class="navbar-brand" href="#index.html">
+        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+    </a> -->
+                <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ml-lg-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">HOME <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/cl_login_reg/">CLIENT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admins_login/">ADMIN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pm_login_reg/">PAINMETRICS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/rt_login_reg/">RELIEFTHERAPY</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/ef_login_reg/">EFFECTIVENESS</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- toggle switch for light and dark theme -->
+                <div class="cont-ser-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <!-- banner section -->
+    <section class="banner-slider-new-main">
+        <div class="hero-header-11">
+            <div id="wrapper">
+                <section class="slideshow" id="js-header">
+                    <div class="slideshow__slide js-slider-home-slide is-current" data-slide="1">
+                        <div class="slideshow__slide-background-parallax background-absolute js-parallax"
+                            data-speed="-1" data-position="top" data-target="#js-header">
+                            <div class="slideshow__slide-background-load-wrap background-absolute">
+                                <div class="slideshow__slide-background-load background-absolute">
+                                    <div class="slideshow__slide-background-wrap background-absolute">
+                                        <div class="slideshow__slide-background background-absolute">
+                                            <div class="slideshow__slide-image-wrap background-absolute">
+                                                <div class="slideshow__slide-image background-absolute"
+                                                    style="background-image: url('assets/images/b1.jpg')">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slideshow__slide-caption">
+                            <div class="slideshow__slide-caption-text">
+                                <div class="container js-parallax wrapper" data-speed="2" data-position="top"
+                                    data-target="#js-header">
+                                    <div style="max-width:700px" class="">
+                                       
+                                        <h1 class="slideshow__slide-caption-title mt-2">Ease your pain, reclaim your strength</h1>
+                                        <a class="btn btn-style mt-sm-5 mt-4" href="/">HOME</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slideshow__slide js-slider-home-slide is-next" data-slide="2">
+                        <div class="slideshow__slide-background-parallax background-absolute js-parallax"
+                            data-speed="-1" data-position="top" data-target="#js-header">
+                            <div class="slideshow__slide-background-load-wrap background-absolute">
+                                <div class="slideshow__slide-background-load background-absolute">
+                                    <div class="slideshow__slide-background-wrap background-absolute">
+                                        <div class="slideshow__slide-background background-absolute">
+                                            <div class="slideshow__slide-image-wrap background-absolute">
+                                                <div class="slideshow__slide-image background-absolute"
+                                                    style="background-image: url('assets/images/b2.jpg')">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slideshow__slide-caption">
+                            <div class="slideshow__slide-caption-text">
+                                <div class="container js-parallax wrapper" data-speed="2" data-position="top"
+                                    data-target="#js-header">
+                                    <div style="max-width:700px" class="m-auto text-center">
+                                        
+                                        <h1 class="slideshow__slide-caption-title mt-2">Strong knees, happy back, better you
+                                        </h1>
+                                        <a class="btn btn-style mt-sm-5 mt-4" href="/">HOME</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slideshow__slide js-slider-home-slide is-prev" data-slide="3">
+                        <div class="slideshow__slide-background-parallax background-absolute js-parallax"
+                            data-speed="-1" data-position="top" data-target="#js-header">
+                            <div class="slideshow__slide-background-load-wrap background-absolute">
+                                <div class="slideshow__slide-background-load background-absolute">
+                                    <div class="slideshow__slide-background-wrap background-absolute">
+                                        <div class="slideshow__slide-background background-absolute">
+                                            <div class="slideshow__slide-image-wrap background-absolute">
+                                                <div class="slideshow__slide-image background-absolute"
+                                                    style="background-image: url('assets/images/b3.jpg')">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slideshow__slide-caption">
+                            <div class="slideshow__slide-caption-text">
+                                <div class="container js-parallax wrapper" data-speed="2" data-position="top"
+                                    data-target="#js-header">
+                                    <div style="max-width:700px;" class="ml-auto">
+                                        <h1 class="slideshow__slide-caption-title mt-2">Your journey to relief starts here.</h1>
+                                        <a class="btn btn-style mt-sm-5 mt-4" href="/">HOME</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="c-header-home_footer">
+                        <div class="o-container wrapper">
+                            <div class="c-header-home_controls -nomobile o-button-group">
+                                <div class="js-parallax is-inview" data-speed="1" data-position="top"
+                                    data-target="#js-header">
+                                    <button
+                                        class="o-button -white -square -left js-slider-home-button js-slider-home-prev"
+                                        type="button">
+                                        <span class="o-button_label">
+                                            <svg class="o-button_icon" role="img">
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    xlink:href="#arrow-prev">
+                                                </use>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <button class="o-button -white -square js-slider-home-button js-slider-home-next"
+                                        type="button">
+                                        <span class="o-button_label">
+                                            <svg class="o-button_icon" role="img">
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    xlink:href="#arrow-next">
+                                                </use>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg">
+                        <symbol viewBox="0 0 18 18" id="arrow-next">
+                            <path id="arrow-next-arrow.svg"
+                                d="M12.6,9L4,17.3L4.7,18l8.5-8.3l0,0L14,9l0,0l-0.7-0.7l0,0L4.7,0L4,0.7L12.6,9z" />
+                        </symbol>
+                        <symbol viewBox="0 0 18 18" id="arrow-prev">
+                            <path id="arrow-prev-arrow.svg"
+                                d="M14,0.7L13.3,0L4.7,8.3l0,0L4,9l0,0l0.7,0.7l0,0l8.5,8.3l0.7-0.7L5.4,9L14,0.7z" />
+                        </symbol>
+                    </svg>
+                </section>
+            </div>
+        </div>
+    </section>
+    <!-- //banner section -->
+
+    <!-- banner bottom section -->
+    <section class="w3l-aboutblock py-5">
+        <div class="container py-md-5 py-sm-4">
+            <div class="row">
+                <div class="col-lg-6 left-wthree-img mb-lg-0 mb-md-5 mb-4">
+                    <img class="img-fluid img-responsive" src="assets/images/about1.jpg" alt=" ">
+                </div>
+                <div class="col-lg-6 about-right-faq align-self position-relative pl-lg-5">
+                    
+                    <h3 class="title-style mb-2 pl-4">BACK PAIN AND KNEE PAIN
+                    </h3>
+                    <p class="mt-3 pl-4">Back pain and knee pain are common concerns that affect daily activities and quality of life. These issues often arise from factors such as poor posture, muscle imbalances, injuries, or degenerative conditions. Our approach focuses on personalized care, offering effective strategies like targeted exercises, therapy recommendations, and lifestyle adjustments to alleviate pain and improve mobility.</p>
+                    <p class="mt-3 pl-4">By understanding the unique causes and symptoms of each individual, we aim to deliver tailored solutions that promote long-term relief. Whether it’s managing chronic pain or recovering from injury, our program emphasizes holistic healing and empowers individuals to regain strength, flexibility, and confidence in their movement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //banner bottom section -->
+
+
+    <!-- Js scripts -->
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fa fa-level-up" aria-hidden="true"></span>
+    </button>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- //move top -->
+
+    <!-- common jquery plugin -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <!-- //common jquery plugin -->
+
+    <!-- banner slider -->
+    <script src="assets/js/slideshow-slider.js"></script>
+    <!-- //banner slider -->
+
+    <!-- counter for stats -->
+    <script src="assets/js/counter.js"></script>
+    <!-- //counter for stats -->
+
+    <!-- pets section -->
+    <script src="assets/js/owl.carousel.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.owl-news').owlCarousel({
+                stagePadding: 200,
+                loop: true,
+                margin: 30,
+                nav: false,
+                responsiveClass: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplaySpeed: 1000,
+                autoplayHoverPause: false,
+                responsive: {
+                    0: {
+                        items: 1,
+                        stagePadding: 40,
+                        nav: false
+                    },
+                    480: {
+                        items: 1,
+                        stagePadding: 40,
+                        nav: true
+                    },
+                    667: {
+                        items: 2,
+                        stagePadding: 50,
+                        nav: true
+                    },
+                    1000: {
+                        items: 2,
+                        nav: true
+                    }
+                }
+            })
+        })
+    </script>
+    <!-- //pets section -->
+
+    <!-- theme switch js (light and dark)-->
+    <script src="assets/js/theme-change.js"></script>
+    <script>
+        function autoType(elementClass, typingSpeed) {
+            var thhis = $(elementClass);
+            thhis.css({
+                "position": "relative",
+                "display": "inline-block"
+            });
+            thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+            thhis = thhis.find(".text-js");
+            var text = thhis.text().trim().split('');
+            var amntOfChars = text.length;
+            var newString = "";
+            thhis.text("|");
+            setTimeout(function () {
+                thhis.css("opacity", 1);
+                thhis.prev().removeAttr("style");
+                thhis.text("");
+                for (var i = 0; i < amntOfChars; i++) {
+                    (function (i, char) {
+                        setTimeout(function () {
+                            newString += char;
+                            thhis.text(newString);
+                        }, i * typingSpeed);
+                    })(i + 1, text[i]);
+                }
+            }, 1500);
+        }
+
+        $(document).ready(function () {
+            // Now to start autoTyping just call the autoType function with the 
+            // class of outer div
+            // The second paramter is the speed between each letter is typed.   
+            autoType(".type-js", 200);
+        });
+    </script>
+    <!-- //theme switch js (light and dark)-->
+
+    <!-- MENU-JS -->
+    <script>
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+    </script>
+    <!-- //MENU-JS -->
+
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            })
+        });
+    </script>
+    <!-- //disable body scroll which navbar is in active -->
+
+    <!--bootstrap-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- //bootstrap-->
+    <!-- //Js scripts -->
+</body>
+
+</html>

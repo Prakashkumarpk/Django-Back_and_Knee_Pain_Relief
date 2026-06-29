@@ -1,0 +1,490 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+     <base href="/static/effectiveness/home/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+      <!-- Add Font Awesome link -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    
+
+    <title>Effectiveness Kneepain Report</title>
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+  </head>
+  <body>
+<!--header-->
+<section class="w3l-header">
+  <header id="site-header" class="fixed-top">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark stroke">
+        <a class="navbar-brand" href="/ef_home/">
+          <span class="fa fa-pencil-square-o"></span> EFFECTIVENESS
+        </a>
+        <!-- if logo is image enable this   
+    <a class="navbar-brand" href="#index.html">
+        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+    </a> -->
+        <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+          <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+          </span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/ef_home/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown @@about-active">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                SYMPTOMS
+                <i class="fas fa-caret-down"></i> <!-- Dropdown symbol -->
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/ef_bp_req/">BACK PAIN</a>
+                <a class="dropdown-item" href="/ef_kp_req/">KNEE PAIN</a>
+              </div>
+            </li>
+            
+            <li class="nav-item dropdown @@contact-active">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ANALYZE
+                <i class="fas fa-caret-down"></i> <!-- Dropdown symbol -->
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="/ef_bp_analyze/">BACK PAIN</a>
+                <a class="dropdown-item" href="/ef_kp_analyze/">KNEE PAIN</a>
+              </div>
+            </li>
+            
+            <li class="nav-item dropdown @@contact-active active">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                REPORT
+                <i class="fas fa-caret-down"></i> <!-- Dropdown symbol -->
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                <a class="dropdown-item" href="/ef_bp_report/">BACK PAIN</a>
+                <a class="dropdown-item active" href="/ef_kp_report/">KNEE PAIN</a>
+              </div>
+            </li>
+            
+            <li class="nav-item @@contact-active">
+              <a class="nav-link" href="/ef_logout/">LOGOUT</a>
+            </li>
+            
+            
+        </div>
+        <!-- toggle switch for light and dark theme -->
+        <div class="mobile-position">
+          <label class="theme-selector">
+            <input type="checkbox" id="themeToggle">
+            <i class="gg-sun"></i>
+            <i class="gg-moon"></i>
+          </label>
+        </div>
+        <!-- //toggle switch for light and dark theme -->
+      </nav>
+    </div>
+  </header>
+  <!--/header-->
+</section>
+<!-- index-block1 -->
+<div class="w3l-index1">
+  <div class="content">
+     <div class="container" > 
+      
+        <div class="col-lg-6">
+          
+            
+                <h2 style="text-align:center; color:black; margin-top:5%;margin-right:-650px;">
+                    KNEE PAIN REPORT </h2> <br>
+                    <div style="max-height:400vh; overflow: auto; margin-right:-630px;" >
+                       
+                        <table class="custom-table">
+                            <thead>
+                              <tr style="text-align:center;">
+                                <th>CLIENT ID</th>
+                                <th>TYPE OF PAIN</th>
+                                <th>SEVERITY(%)</th>
+                                <th>TYPE OF KNEEPAIN</th>
+                                <th>THERAPY</th>
+                                <th>DURATION</th>
+                                <th>PAIN BEFORE THERAPY(%)</th>
+                                <th>PAIN AFTER THERAPY(REDUCED %)</th>
+                                <th>SWELLING(REDUCED %)</th>
+                                <th>STIFFNESS(REDUCED %)</th>
+                                <th>WARMTH AND REDNESS(REDUCED %)</th>
+                                <th>WEAKNESS OR INSTABILITY(REDUCED %)</th>
+                                <th>POPPING OR GRINDING SENSATION(REDUCED %)</th>
+                                <th>LIMITED RANGE OF MOTION(REDUCED %)</th>
+                                <th>PAIN WITH CERTAIN MOVEMENT(REDUCED %)</th>
+                                <th>TENDERNESS(REDUCED %)</th>
+                                <th>BEARING WEIGHT(REDUCED %)</th>
+                                <th>OVERALL RELIEF PRECEPTION(%)</th>
+                                <th>EFFECTIVENESS (%)</th>
+                               
+                              </tr>
+                            </thead>
+                            <tbody>
+                              
+                              {% if obj %}
+                              {% for i in obj %}
+                                
+                                  {% if i.rt_kp_scan is True %}
+                                    <tr style="text-align:center;">
+                                      <td>{{ i.cl_rh_id }}</td>
+                                      <td>{{ i.type_of_pain }}</td>
+                                      <td>{{ i.severity }}</td>
+                                      <td>{{ i.type_of_kneepain }}</td>
+                                      <td>{{ i.therapy }}</td>
+                                      <td>{{ i.duration }}</td>
+                                      <td>{{ i.r_pain_intensity_before_therapy }}</td>
+                                      <td>{{ i.r_pain_intensity_after_therapy }}</td>
+                                      <td>{{ i.r_swelling }}</td>
+                                      <td>{{ i.r_stiffness }}</td>
+                                      <td>{{ i.r_warmth_and_redness }}</td>
+                                      <td>{{ i.r_weakness_or_instability }}</td>
+                                      <td>{{ i.r_popping_or_grinding_sensation }}</td>
+                                      <td>{{ i.r_limited_range_of_motion }}</td>
+                                      <td>{{ i.r_pain_with_certain_movements }}</td>
+                                      <td>{{ i.r_tenderness }}</td>
+                                      <td>{{ i.r_bearing_weight }}</td>
+                                      <td>{{ i.r_overall_relief_preception }}</td>
+                                      <td>{{ i.effectiveness }}</td>
+                                    </tr>
+                                    
+                  
+                                  {% endif %}
+                                  {% endfor %}
+                                      
+                              {% else %}
+                              <tr>
+                                <td colspan="21" style="text-align:center;">No Data Found</td>
+                              </tr>
+                                
+                              {% endif %}
+                              
+                            </tbody>
+                          </table> 
+            </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  
+</div>
+<!-- //index-block1 -->
+
+<script>
+	{% for message in messages %}
+		alert('{{ message }}');
+	{% endfor %}
+</script>
+
+<style>
+    .scan-button {
+        background-color: #28a745; /* Green color */
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 30px; /* Rounded corners */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        cursor: pointer;
+        transition: all 0.3s ease; /* Smooth transition */
+    }
+  
+    .scan-button:hover {
+        background-color: #218838; /* Darker green on hover */
+        transform: scale(1.05); /* Slightly increase size on hover */
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25); /* Enhanced shadow on hover */
+    }
+  
+    .scan-button:active {
+        transform: scale(1); /* Reset size on click */
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow on click */
+    }
+  </style>
+
+<style>
+
+
+    .custom-table {
+      max- width:100%;%
+      font-size: 16px;
+      text-align: center;
+    }
+    
+    .custom-table thead tr {
+      background-color: #742933;
+      color: #ffffff;
+    }
+    
+    .custom-table th, .custom-table td {
+      padding: 12px 15px;
+      border: 1px solid #dddddd;
+    }
+    
+    .custom-table tbody tr {
+      background-color: #ffffff;
+      color: #000000;
+    }
+    
+    .custom-table tbody tr:nth-child(even) {
+      background-color: #f3f3f3;
+    }
+    </style>
+
+
+
+
+
+<footer>
+  <!-- footer -->
+  <section class="w3l-footer">
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+      <span class="fa fa-angle-up"></span>
+    </button>
+    <script>
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction()
+      };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("movetop").style.display = "block";
+        } else {
+          document.getElementById("movetop").style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+    <!-- //move top -->
+    <script>
+      $(function () {
+        $('.navbar-toggler').click(function () {
+          $('body').toggleClass('noscroll');
+        })
+      });
+    </script>
+  </section>
+  <!-- //footer -->
+</footer>
+
+<!-- jQuery JS -->
+<!-- <script src="assets/js/jquery-3.4.1.slim.min.js"></script> -->
+<!-- jQuery JS -->
+<script src="assets/js/jquery-1.9.1.min.js"></script>
+
+<!-- Template JavaScript -->
+
+<!-- owl carousel -->
+<script src="assets/js/owl.carousel.js"></script>
+
+
+<!-- courses for customers -->
+<script>
+  $(document).ready(function () {
+    $('.owl-courses').owlCarousel({
+      loop: true,
+      margin: 30,
+      nav: false,
+      responsiveClass: true,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplaySpeed: 1000,
+      autoplayHoverPause: false,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2
+        },
+        1000: {
+          items: 3
+        }
+      }
+    })
+  })
+</script>
+<!-- //courses owlcarousel -->
+
+<!-- magnific popup -->
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('.popup-with-zoom-anim').magnificPopup({
+      type: 'inline',
+
+      fixedContentPos: false,
+      fixedBgPos: true,
+
+      overflowY: 'auto',
+
+      closeBtnInside: true,
+      preloader: false,
+
+      midClick: true,
+      removalDelay: 300,
+      mainClass: 'my-mfp-zoom-in'
+    });
+
+    $('.popup-with-move-anim').magnificPopup({
+      type: 'inline',
+
+      fixedContentPos: false,
+      fixedBgPos: true,
+
+      overflowY: 'auto',
+
+      closeBtnInside: true,
+      preloader: false,
+
+      midClick: true,
+      removalDelay: 300,
+      mainClass: 'my-mfp-slide-bottom'
+    });
+  });
+</script>
+
+<!-- responsive tabs -->
+<script src="assets/js/easyResponsiveTabs.js"></script>
+
+<!--Plug-in Initialisation-->
+<script type="text/javascript">
+  $(document).ready(function () {
+    //Horizontal Tab
+    $('#parentHorizontalTab').easyResponsiveTabs({
+      type: 'default', //Types: default, vertical, accordion
+      width: 'auto', //auto or any width like 600px
+      fit: true, // 100% fit in a container
+      tabidentify: 'hor_1', // The tab groups identifier
+      activate: function (event) { // Callback function if tab is switched
+        var $tab = $(this);
+        var $info = $('#nested-tabInfo');
+        var $name = $('span', $info);
+        $name.text($tab.text());
+        $info.show();
+      }
+    });
+  });
+</script>
+
+<!-- stats number counter-->
+<script src="assets/js/jquery.waypoints.min.js"></script>
+<script src="assets/js/jquery.countup.js"></script>
+<script>
+  $('.counter').countUp();
+</script>
+<!-- //stats number counter -->
+
+<!-- disable body scroll which navbar is in active -->
+<script>
+  $(function () {
+    $('.navbar-toggler').click(function () {
+      $('body').toggleClass('noscroll');
+    })
+  });
+</script>
+<!-- disable body scroll which navbar is in active -->
+
+<!--/MENU-JS-->
+<script>
+  $(window).on("scroll", function () {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 80) {
+      $("#site-header").addClass("nav-fixed");
+    } else {
+      $("#site-header").removeClass("nav-fixed");
+    }
+  });
+
+  //Main navigation Active Class Add Remove
+  $(".navbar-toggler").on("click", function () {
+    $("header").toggleClass("active");
+  });
+  $(document).on("ready", function () {
+    if ($(window).width() > 991) {
+      $("header").removeClass("active");
+    }
+    $(window).on("resize", function () {
+      if ($(window).width() > 991) {
+        $("header").removeClass("active");
+      }
+    });
+  });
+</script>
+<!--//MENU-JS-->
+
+
+<!--theme switcher dark and light mode script-->
+<script>
+  const bodyElement = document.querySelector('body');
+  const themeToggle = document.querySelector('#themeToggle');
+  const darkModeMql = window.matchMedia('(prefers-color-scheme: dark)');
+
+  const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : userPreference(darkModeMql);
+
+  if (currentTheme) {
+    bodyElement.classList.add(currentTheme);
+
+    if (currentTheme === 'dark') {
+      themeToggle.checked = true;
+    }
+  }
+
+  function userPreference(e) {
+    if (e.matches) {
+      bodyElement.classList.add("dark");
+      return "dark"
+    } else {
+      bodyElement.classList.remove("dark");
+      return ""
+    }
+  }
+
+  darkModeMql.addListener(userPreference);
+
+  function themeSwitcher(e) {
+    if (e.target.checked) {
+      bodyElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      bodyElement.classList.remove('dark');
+      localStorage.setItem('theme', '');
+    }
+  }
+
+  themeToggle.addEventListener('change', themeSwitcher);
+</script>
+<!--//theme switcher dark and light mode script-->
+
+
+<!-- Bootstrap JS -->
+<script src="assets/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

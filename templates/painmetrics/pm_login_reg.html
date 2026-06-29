@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <base href="/static/client/login_reg/">
+    <title>Painmetrics Login and Registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Registration / Login form Responsive Widget, Login forms,Flat Pricing tables,Flat Drop downs Sign up Web forms, Login sign up Responsive web Forms," />
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+        function hideURLbar() { window.scrollTo(0, 1); }
+    </script>
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="//fonts.googleapis.com/css?family=Signika:300,400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+    <script src="js/jquery2.0.3.min.js"></script>
+    <style>
+        /* Custom styles for equal spacing between input fields */
+        .form-group {
+            margin-bottom: 20px;
+        }
+        /* Style for eye icon */
+        .password-toggle {
+            position: relative;
+        }
+        .password-toggle .toggle-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<script>
+	{% for message in messages %}
+		alert('{{ message }}');
+	{% endfor %}
+</script>
+
+<body class="dashboard-page">
+    <div class="main-grid">
+        <div class="agile-grids">
+            <div class="grids">
+                <div class="progressbar-heading grids-heading">
+                    <h2>PAINMETRICS Registration / Login form</h2>
+                </div>
+                <div class="forms-grids">
+                    <div class="forms3">
+                        <div class="w3agile-validation w3ls-validation">
+                            <div class="panel panel-widget agile-validation register-form">
+                                <div class="validation-grids widget-shadow" data-example-id="basic-forms">
+                                    <div class="input-info">
+                                        <h3>Register Form :</h3>
+                                    </div>
+                                    <div class="form-body form-body-info">
+                                        <form data-toggle="validator" action="/pm_reg/" method="post">
+											{% csrf_token %}
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="inputName" name="name" placeholder="Username" required="" autocomplete="off">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" name="email" placeholder="Email" data-error="That email address is invalid" required="" autocomplete="off">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="tel" class="form-control" id="inputMobile" name="mobile_no" placeholder="Mobile Number" required="" autocomplete="off">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="inputDepartment" name="department" value="PAINMETRICS" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-primary">SIGNUP</button>
+                                            </div>
+                                        </form>
+                                        <div class="form-group">
+                                            <a href="/"><button type="button" class="btn btn-primary">BACK</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-widget agile-validation">
+                                <div class="validation-grids validation-grids-right login-form">
+                                    <div class="widget-shadow login-form-shadow" data-example-id="basic-forms">
+                                        <div class="input-info">
+                                            <h3>Login form :</h3>
+                                        </div>
+                                        <div class="form-body form-body-info">
+                                            <form data-toggle="validator" action="/pm_validate_login/" method="post">
+												{% csrf_token %}
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" name="email" placeholder="Enter Your Email" data-error="That email address is invalid" required="" autocomplete="off">
+                                                </div>
+                                                <div class="form-group password-toggle">
+                                                    <input type="password" class="form-control" id="inputPassword1" name="password" placeholder="Password" required="" autocomplete="off">
+                                                    <span class="toggle-icon" onclick="togglePassword()">
+                                                        👁️
+                                                    </span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-primary">Login</button>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </form>
+                                            <div class="form-group">
+                                                <a href="/"><button type="button" class="btn btn-primary">BACK</button></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/valida.2.1.6.min.js"></script>
+    <script src="js/validator.min.js"></script>
+    <script>
+        function togglePassword() {
+            const passwordField = document.getElementById("inputPassword1");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+        }
+    </script>
+</body>
+</html>
